@@ -1,0 +1,11 @@
+region          = "us-east-1"
+vpc_cidr        = "10.0.0.0/16"
+subnet_cidr     = "10.0.1.0/24"
+ecs_cluster_name = "hello-world-cluster"
+ecs_task_family  = "hello-world-task"
+ecs_task_cpu     = "256"
+ecs_task_memory  = "512"
+container_name   = "hello-world"
+container_port   = 3000
+host_port        = 3000
+docker_image     = "public.ecr.aws/c1z5d8e5/nodejs-app:latest"
