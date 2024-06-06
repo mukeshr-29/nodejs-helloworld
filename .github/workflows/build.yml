@@ -18,10 +18,9 @@ jobs:
 
       - name: Log in to Amazon ECR
         id: login-ecr
-        uses: aws-ecr-login@v1
-        with:
-          region: us-east-1
-          registry: public.ecr.aws
+        run: |
+          aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws
+
 
 
       - name: Build and push Docker image
