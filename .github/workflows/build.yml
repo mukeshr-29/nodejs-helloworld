@@ -20,8 +20,8 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
         with:
-          registry: public.ecr.aws
           region: us-east-1
+          registry: public.ecr.aws
 
       - name: Build and push Docker image
         env:
